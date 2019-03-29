@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body><body id="body1">
+		
+			<p >姓名：<input type="text" id="name"/></p>
+			<p id="age">年龄：<input type="text" id="age2"/></p>
+			<p >电话：<input type="text" id="tel"/></p>
+			<p >住址：<input type="text" id="adder"/></p>
+			<button id="btn" type="submit" onclick="getInfo()">确认<tton>
+		
+			<script>
+				var body1=document.getElementById("body1");
+				var age=document.getElementById("age");
+				var btn=document.getElementById("btn");
+				console.log(body1.nodeName +"的子元素节点一共有"+body1.childNodes.length+"个");
+				for (var i=0;i<body1.childNodes.length;i++) {
+					console.log("第"+i+"个节点名称是："+body1.childNodes[i].nodeName);
+				}
+				var sex=document.createElement("p");
+				var inp=document.createElement("input");
+				var wen=document.createTextNode("性别：");
+				sex.appendChild(wen);
+				sex.appendChild(inp);
+				body1.insertBefore(sex,age);
+				
+				function getInfo(){
+					var name=document.getElementById("name").value;
+					var age2=document.getElementById("age2").value;
+					var tel=document.getElementById("tel").value;
+					 adder=document.getElementById("adder").value;
+					alert("姓名："+name+"的年龄是"+age2+",ta的电话是"+tel+"地址是"+adder);
+				}
+				
+				adder.style.width="200px";
+				adder.style.height="100px";
+				adder.style.border="2px solid red";
+				
+			</script>	
+			
+			
+	</body>
+
+		<script>
+			
+		
+</script>
+	
+	</body>
+</html>
